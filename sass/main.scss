@@ -1,0 +1,169 @@
+// Mixin
+@mixin flex($flow: row, $align: stretch, $justify: start, $gap: 0) {
+  display: flex;
+  flex-flow: $flow;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin respond($tamanho) {
+  @if $tamanho == big-max {
+    @media (max-width: 82.25em) {
+      @content;
+    }
+  } @else if $tamanho == big {
+    @media (max-width: 70.125em) {
+      @content;
+    }
+  } @else if $tamanho == medium {
+    @media (max-width: 62.44em) {
+      @content;
+    }
+  } @else if $tamanho == small {
+    @media (max-width: 47.94em) {
+      @content;
+    }
+  } @else if $tamanho == small-extra {
+    @media (max-width: 30.94em) {
+      @content;
+    }
+  }
+}
+
+// Variaveis
+$color-principal: #d90429;
+$color-secundario: #1d1b1b;
+$color-neutro: #edf2f4;
+
+// Padrão
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  @include respond(small) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Montsserat", sans-serif;
+  line-height: 1.2;
+  font-size: 1.6rem;
+  background-color: $color-principal;
+  color: $color-neutro;
+}
+
+// Main
+
+.main {
+  @include flex($align: center, $justify: center);
+  height: 100vh;
+
+  &__container-pokedex {
+    width: 30rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 1rem 1rem 0.8rem rgba(0, 0, 0, 15%);
+    background-color: $color-secundario;
+  }
+
+  &__titulo {
+    text-align: center;
+    padding: 1.02rem 1.28rem;
+  }
+
+  &__container-imagem {
+    position: relative;
+  }
+
+  &__info {
+    @include flex($flow: column, $align: left, $gap: 1.6rem);
+    padding: 1.6rem 1.92rem;
+    position: relative;
+  }
+
+  &__container-info {
+    @include flex($align: center, $gap: 1.02rem);
+  }
+
+  &__pokebola {
+    width: 5rem;
+    position: absolute;
+    top: 0;
+    border-radius: 5rem;
+    transform: translate(11rem, -3.5rem);
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__search-btn {
+    padding: 1.02rem 1.6rem;
+    background-color: $color-neutro;
+    color: $color-principal;
+    font-weight: 700;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.92rem;
+    transition: all 0.4s ease-in;
+    width: 100%;
+  }
+
+  &__search-btn:hover,
+  &__search-btn:focus {
+    background-color: $color-principal;
+    color: $color-neutro;
+  }
+
+  & #main__campo-pesquisa {
+    padding: 0.65rem 0.82rem;
+    border-radius: 1rem;
+    font-size: 1.92rem;
+  }
+
+  &__imagem-pokemon {
+    width: 100%;
+  }
+
+  &__containerImagem-pokemon {
+    @include flex($align: center, $justify: center);
+    width: 5rem;
+    height: 5rem;
+    background-color: $color-neutro;
+    position: absolute;
+    top: 0;
+    transform: translate(12.5rem, 150%);
+    border-radius: 0.65rem;
+    overflow: hidden;
+  }
+
+  &__logo-pokebola {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+
+    & img {
+      width: 4rem;
+    }
+  }
+
+  &__contador-Pokemon {
+    @include flex($align: center, $justify: center);
+    width: 3rem;
+    height: 3rem;
+    background-color: $color-neutro;
+    color: $color-secundario;
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translate(100%, -50%);
+    font-weight: 700;
+  }
+}

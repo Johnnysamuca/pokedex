@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montsserat", sans-serif;
+  line-height: 1.2;
+  font-size: 1.6rem;
+  background-color: #d90429;
+  color: #edf2f4;
+}
+
+.container-erro {
+  position: fixed;
+  top: 0;
+  height: 10rem;
+  width: 100vw;
+  background-color: #edf2f4;
+  transition: all 0.8s ease-in;
+  display: none;
+}
+.container-erro__message-erro {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  font-size: 2.76rem;
+  color: #d90429;
+  font-weight: 600;
+  margin-top: 3rem;
+}
+
+/*# sourceMappingURL=erro.css.map */

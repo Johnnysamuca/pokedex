@@ -1,0 +1,50 @@
+// Mixin
+@mixin flex($flow: row, $align: stretch, $justify: start, $gap: 0) {
+  display: flex;
+  flex-flow: $flow;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+// Variaveis
+$color-principal: #d90429;
+$color-secundario: #1d1b1b;
+$color-neutro: #edf2f4;
+
+// Padrão
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montsserat", sans-serif;
+  line-height: 1.2;
+  font-size: 1.6rem;
+  background-color: $color-principal;
+  color: $color-neutro;
+}
+
+.container-erro {
+  position: fixed;
+  top: 0;
+  height: 10rem;
+  width: 100vw;
+  background-color: $color-neutro;
+  transition: all 0.8s ease-in;
+  display: none;
+
+  &__message-erro {
+    @include flex($align: center, $justify: center);
+    font-size: 2.76rem;
+    color: $color-principal;
+    font-weight: 600;
+    margin-top: 3rem;
+  }
+}

@@ -1,0 +1,111 @@
+// Mixin
+@mixin flex($flow: row, $align: stretch, $justify: start, $gap: 0) {
+  display: flex;
+  flex-flow: $flow;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+// Variaveis
+$color-principal: #d90429;
+$color-secundario: #1d1b1b;
+$color-neutro: #edf2f4;
+
+// Padrão
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montsserat", sans-serif;
+  line-height: 1.2;
+  font-size: 1.6rem;
+  background-color: $color-principal;
+  color: $color-neutro;
+}
+
+// Modal
+
+.modal-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.575);
+  backdrop-filter: 0.65rem;
+  @include flex($align: center, $justify: center);
+  visibility: hidden;
+
+  &__lista-pokemon {
+    position: relative;
+    max-width: 80rem;
+    background-color: $color-secundario;
+    color: $color-neutro;
+    @include flex(
+      $flow: row wrap,
+      $align: center,
+      $justify: space-between,
+      $gap: 1.6rem
+    );
+    padding: 1.28rem 1.6rem;
+    border-radius: 2rem;
+  }
+
+  &__item-lista {
+    @include flex($flow: column);
+    max-width: 20rem;
+    padding-bottom: 5rem;
+  }
+
+  &__nome-Pokemon {
+    align-self: center;
+  }
+
+  &__imagem-pokemon {
+    width: 15rem;
+    align-self: center;
+    border-radius: 2rem;
+  }
+
+  &__removeBtn {
+    padding: 0.65rem 0.82rem;
+    border-radius: 1rem;
+    background-color: $color-principal;
+    color: $color-neutro;
+    border: none;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-neutro;
+      color: $color-principal;
+    }
+  }
+
+  &__fechar-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $color-principal;
+    color: $color-secundario;
+    font-weight: 700;
+    @include flex($align: center, $justify: center);
+    border-radius: 50%;
+    padding: 0.65rem 0.82rem;
+    transform: translate(50%, -50%);
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-neutro;
+    }
+  }
+}

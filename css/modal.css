@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montsserat", sans-serif;
+  line-height: 1.2;
+  font-size: 1.6rem;
+  background-color: #d90429;
+  color: #edf2f4;
+}
+
+.modal-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.575);
+  backdrop-filter: 0.65rem;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  visibility: hidden;
+}
+.modal-container__lista-pokemon {
+  position: relative;
+  max-width: 80rem;
+  background-color: #1d1b1b;
+  color: #edf2f4;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  padding: 1.28rem 1.6rem;
+  border-radius: 2rem;
+}
+.modal-container__item-lista {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+  max-width: 20rem;
+  padding-bottom: 5rem;
+}
+.modal-container__nome-Pokemon {
+  align-self: center;
+}
+.modal-container__imagem-pokemon {
+  width: 15rem;
+  align-self: center;
+  border-radius: 2rem;
+}
+.modal-container__removeBtn {
+  padding: 0.65rem 0.82rem;
+  border-radius: 1rem;
+  background-color: #d90429;
+  color: #edf2f4;
+  border: none;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.modal-container__removeBtn:hover {
+  background-color: #edf2f4;
+  color: #d90429;
+}
+.modal-container__fechar-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #d90429;
+  color: #1d1b1b;
+  font-weight: 700;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border-radius: 50%;
+  padding: 0.65rem 0.82rem;
+  transform: translate(50%, -50%);
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.modal-container__fechar-modal:hover {
+  background-color: #edf2f4;
+}
+
+/*# sourceMappingURL=modal.css.map */

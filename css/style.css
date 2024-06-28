@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 47.94em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Montsserat", sans-serif;
+  line-height: 1.2;
+  font-size: 1.6rem;
+  background-color: #d90429;
+  color: #edf2f4;
+}
+
+.main {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  height: 100vh;
+}
+.main__container-pokedex {
+  width: 30rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 1rem 1rem 0.8rem rgba(0, 0, 0, 0.15);
+  background-color: #1d1b1b;
+}
+.main__titulo {
+  text-align: center;
+  padding: 1.02rem 1.28rem;
+}
+.main__container-imagem {
+  position: relative;
+}
+.main__info {
+  display: flex;
+  flex-flow: column;
+  align-items: left;
+  justify-content: start;
+  gap: 1.6rem;
+  padding: 1.6rem 1.92rem;
+  position: relative;
+}
+.main__container-info {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: start;
+  gap: 1.02rem;
+}
+.main__pokebola {
+  width: 5rem;
+  position: absolute;
+  top: 0;
+  border-radius: 5rem;
+  transform: translate(11rem, -3.5rem);
+}
+.main__image {
+  width: 100%;
+}
+.main__search-btn {
+  padding: 1.02rem 1.6rem;
+  background-color: #edf2f4;
+  color: #d90429;
+  font-weight: 700;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.92rem;
+  transition: all 0.4s ease-in;
+  width: 100%;
+}
+.main__search-btn:hover, .main__search-btn:focus {
+  background-color: #d90429;
+  color: #edf2f4;
+}
+.main #main__campo-pesquisa {
+  padding: 0.65rem 0.82rem;
+  border-radius: 1rem;
+  font-size: 1.92rem;
+}
+.main__imagem-pokemon {
+  width: 100%;
+}
+.main__containerImagem-pokemon {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 5rem;
+  height: 5rem;
+  background-color: #edf2f4;
+  position: absolute;
+  top: 0;
+  transform: translate(12.5rem, 150%);
+  border-radius: 0.65rem;
+  overflow: hidden;
+}
+.main__logo-pokebola {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+}
+.main__logo-pokebola img {
+  width: 4rem;
+}
+.main__contador-Pokemon {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: #edf2f4;
+  color: #1d1b1b;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  transform: translate(100%, -50%);
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */
