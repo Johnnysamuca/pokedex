@@ -7,7 +7,7 @@
 html {
   font-size: 62.5%;
 }
-@media (max-width: 47.94em) {
+@media (max-width: 62.44em) {
   html {
     font-size: 50%;
   }
@@ -36,9 +36,27 @@ body {
   box-shadow: 1rem 1rem 0.8rem rgba(0, 0, 0, 0.15);
   background-color: #1d1b1b;
 }
+@media (max-width: 82.25em) {
+  .main__container-pokedex {
+    height: 40rem;
+    overflow: auto;
+  }
+}
 .main__titulo {
   text-align: center;
   padding: 1.02rem 1.28rem;
+}
+@media (max-width: 82.25em) {
+  .main__titulo {
+    position: fixed;
+    z-index: 1;
+    background-color: #1d1b1b;
+    text-align: center;
+    width: 30rem;
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
 }
 .main__container-imagem {
   position: relative;
@@ -65,6 +83,12 @@ body {
   top: 0;
   border-radius: 5rem;
   transform: translate(11rem, -3.5rem);
+}
+@media (max-width: 62.44em) {
+  .main__pokebola {
+    width: 4rem;
+    transform: translate(11rem, -2.5rem);
+  }
 }
 .main__image {
   width: 100%;
@@ -107,10 +131,20 @@ body {
   border-radius: 0.65rem;
   overflow: hidden;
 }
+@media (max-width: 62.44em) {
+  .main__containerImagem-pokemon {
+    transform: translate(12.5rem, 250%);
+  }
+}
 .main__logo-pokebola {
   position: fixed;
   bottom: 4rem;
   right: 4rem;
+}
+@media (max-width: 30.94em) {
+  .main__logo-pokebola {
+    transform: translate(2.3rem);
+  }
 }
 .main__logo-pokebola img {
   width: 4rem;
@@ -131,6 +165,11 @@ body {
   left: 0;
   transform: translate(100%, -50%);
   font-weight: 700;
+}
+@media (max-width: 30.94em) {
+  .main__contador-Pokemon {
+    transform: translate(2.6rem, -1.8rem);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

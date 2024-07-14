@@ -7,6 +7,11 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 47.94em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Montsserat", sans-serif;
@@ -30,6 +35,7 @@ body {
   justify-content: center;
   gap: 0;
   visibility: hidden;
+  z-index: 2;
 }
 .modal-container__lista-pokemon {
   position: relative;
@@ -44,6 +50,12 @@ body {
   padding: 1.28rem 1.6rem;
   border-radius: 2rem;
 }
+@media (max-width: 47.94em) {
+  .modal-container__lista-pokemon {
+    max-width: 50rem;
+    max-height: 50rem;
+  }
+}
 .modal-container__item-lista {
   display: flex;
   flex-flow: column;
@@ -53,6 +65,12 @@ body {
   max-width: 20rem;
   padding-bottom: 5rem;
 }
+@media (max-width: 47.94em) {
+  .modal-container__item-lista {
+    max-width: 10rem;
+    padding-bottom: 1rem;
+  }
+}
 .modal-container__nome-Pokemon {
   align-self: center;
 }
@@ -60,6 +78,11 @@ body {
   width: 15rem;
   align-self: center;
   border-radius: 2rem;
+}
+@media (max-width: 47.94em) {
+  .modal-container__imagem-pokemon {
+    width: 10rem;
+  }
 }
 .modal-container__removeBtn {
   padding: 0.65rem 0.82rem;
@@ -91,6 +114,13 @@ body {
   transform: translate(50%, -50%);
   transition: all 0.3s ease-in;
   cursor: pointer;
+}
+@media (max-width: 47.94em) {
+  .modal-container__fechar-modal {
+    right: auto;
+    left: 0;
+    transform: translate(10%, -50%);
+  }
 }
 .modal-container__fechar-modal:hover {
   background-color: #edf2f4;

@@ -45,7 +45,8 @@ $color-neutro: #edf2f4;
 
 html {
   font-size: 62.5%;
-  @include respond(small) {
+
+  @include respond(medium) {
     font-size: 50%;
   }
 }
@@ -70,11 +71,27 @@ body {
     overflow: hidden;
     box-shadow: 1rem 1rem 0.8rem rgba(0, 0, 0, 15%);
     background-color: $color-secundario;
+
+    @include respond(big-max) {
+      height: 40rem;
+      overflow: auto;
+    }
   }
 
   &__titulo {
     text-align: center;
     padding: 1.02rem 1.28rem;
+
+    @include respond(big-max) {
+      position: fixed;
+      z-index: 1;
+      background-color: #1d1b1b;
+      text-align: center;
+      width: 30rem;
+      overflow: hidden;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
   }
 
   &__container-imagem {
@@ -97,6 +114,11 @@ body {
     top: 0;
     border-radius: 5rem;
     transform: translate(11rem, -3.5rem);
+
+    @include respond(medium) {
+      width: 4rem;
+      transform: translate(11rem, -2.5rem);
+    }
   }
 
   &__image {
@@ -141,12 +163,19 @@ body {
     transform: translate(12.5rem, 150%);
     border-radius: 0.65rem;
     overflow: hidden;
+
+    @include respond(medium) {
+      transform: translate(12.5rem, 250%);
+    }
   }
 
   &__logo-pokebola {
     position: fixed;
     bottom: 4rem;
     right: 4rem;
+    @include respond(small-extra) {
+      transform: translate(2.3rem);
+    }
 
     & img {
       width: 4rem;
@@ -165,5 +194,10 @@ body {
     left: 0;
     transform: translate(100%, -50%);
     font-weight: 700;
+
+    @include respond(small-extra) {
+      transform: translate(2.6rem, -1.8rem);
+      // transform: translate(46px, -18px);
+    }
   }
 }

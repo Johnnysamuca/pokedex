@@ -39,6 +39,7 @@ body {
   background-color: $color-neutro;
   transition: all 0.8s ease-in;
   display: none;
+  z-index: 3;
 
   &__message-erro {
     @include flex($align: center, $justify: center);

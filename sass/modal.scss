@@ -7,6 +7,30 @@
   gap: $gap;
 }
 
+@mixin respond($tamanho) {
+  @if $tamanho == big-max {
+    @media (max-width: 82.25em) {
+      @content;
+    }
+  } @else if $tamanho == big {
+    @media (max-width: 70.125em) {
+      @content;
+    }
+  } @else if $tamanho == medium {
+    @media (max-width: 62.44em) {
+      @content;
+    }
+  } @else if $tamanho == small {
+    @media (max-width: 47.94em) {
+      @content;
+    }
+  } @else if $tamanho == small-extra {
+    @media (max-width: 30.94em) {
+      @content;
+    }
+  }
+}
+
 // Variaveis
 $color-principal: #d90429;
 $color-secundario: #1d1b1b;
@@ -21,6 +45,10 @@ $color-neutro: #edf2f4;
 
 html {
   font-size: 62.5%;
+
+  @include respond(small) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -43,6 +71,7 @@ body {
   backdrop-filter: 0.65rem;
   @include flex($align: center, $justify: center);
   visibility: hidden;
+  z-index: 2;
 
   &__lista-pokemon {
     position: relative;
@@ -57,12 +86,22 @@ body {
     );
     padding: 1.28rem 1.6rem;
     border-radius: 2rem;
+
+    @include respond(small) {
+      max-width: 50rem;
+      max-height: 50rem;
+    }
   }
 
   &__item-lista {
     @include flex($flow: column);
     max-width: 20rem;
     padding-bottom: 5rem;
+
+    @include respond(small) {
+      max-width: 10rem;
+      padding-bottom: 1rem;
+    }
   }
 
   &__nome-Pokemon {
@@ -73,6 +112,10 @@ body {
     width: 15rem;
     align-self: center;
     border-radius: 2rem;
+
+    @include respond(small) {
+      width: 10rem;
+    }
   }
 
   &__removeBtn {
@@ -103,6 +146,12 @@ body {
     transform: translate(50%, -50%);
     transition: all 0.3s ease-in;
     cursor: pointer;
+
+    @include respond(small) {
+      right: auto;
+      left: 0;
+      transform: translate(10%, -50%);
+    }
 
     &:hover {
       background-color: $color-neutro;

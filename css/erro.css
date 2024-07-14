@@ -24,6 +24,7 @@ body {
   background-color: #edf2f4;
   transition: all 0.8s ease-in;
   display: none;
+  z-index: 3;
 }
 .container-erro__message-erro {
   display: flex;
