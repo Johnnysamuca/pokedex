@@ -73,7 +73,6 @@ body {
     background-color: $color-secundario;
 
     @include respond(big-max) {
-      height: 40rem;
       overflow: auto;
     }
   }
@@ -114,11 +113,6 @@ body {
     top: 0;
     border-radius: 5rem;
     transform: translate(11rem, -3.5rem);
-
-    @include respond(medium) {
-      width: 4rem;
-      transform: translate(11rem, -2.5rem);
-    }
   }
 
   &__image {
@@ -163,19 +157,12 @@ body {
     transform: translate(12.5rem, 150%);
     border-radius: 0.65rem;
     overflow: hidden;
-
-    @include respond(medium) {
-      transform: translate(12.5rem, 250%);
-    }
   }
 
   &__logo-pokebola {
     position: fixed;
     bottom: 4rem;
     right: 4rem;
-    @include respond(small-extra) {
-      transform: translate(2.3rem);
-    }
 
     & img {
       width: 4rem;
@@ -194,10 +181,5 @@ body {
     left: 0;
     transform: translate(100%, -50%);
     font-weight: 700;
-
-    @include respond(small-extra) {
-      transform: translate(2.6rem, -1.8rem);
-      // transform: translate(46px, -18px);
-    }
   }
 }
